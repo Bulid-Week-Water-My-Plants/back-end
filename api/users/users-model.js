@@ -6,7 +6,7 @@ async function getUsers(){
 }
 
 async function getUser(id){
-const user = await db("users").where('id', id)
+const user = await db("users").where('user_id', id)
 return user
 }
 
