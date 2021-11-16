@@ -20,6 +20,12 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "gitignore": "^0.7.0"
+    "gitignore": "^0.7.0",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "nodemon": "^2.0.15"
   }
 }
