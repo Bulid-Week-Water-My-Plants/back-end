@@ -1,5 +1,4 @@
 {
-
   "name": "build-week-scaffolding-node",
   "version": "1.0.0",
   "scripts": {
@@ -35,6 +34,17 @@
     "jest": "27.3.1",
     "nodemon": "2.0.14",
     "supertest": "6.1.6"
-
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bulid-Week-Water-My-Plants/back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Bulid-Week-Water-My-Plants/back-end/issues"
+  },
+  "homepage": "https://github.com/Bulid-Week-Water-My-Plants/back-end#readme"
 }
