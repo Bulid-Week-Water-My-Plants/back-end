@@ -7,7 +7,7 @@ exports.up = async (knex) => {
       plants.string('h2oFrequency', 200).notNullable()
       plants.string('image', 200)
     })
-    createTable('users', users => {
+    .createTable('users', users => {
       users.increments('user_id');
       users.string('username', 255).notNullable().unique();
       users.string('password', 255).notNullable();
