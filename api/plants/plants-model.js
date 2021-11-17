@@ -15,4 +15,12 @@ async function insertPlanet(newPlant){
     return getPlant().where({plant_id}).first();
 }
 
-module.exports = {getPlant, getPlants, insertPlanet}
+function deletePlant(plant_id){
+    return db('plants').where({plant_id}).del()
+}
+
+async function updatePlant(plant_id, changes){
+    return db('plants').where({plant_id}).update(changes,'*')
+}
+
+module.exports = {getPlant, getPlants, insertPlanet, deletePlant, updatePlant}
