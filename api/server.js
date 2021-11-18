@@ -1,7 +1,7 @@
 const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
-const db = require('./data/db-config')
+const db = require('../data/db-config')
 const authRouter = require('./auth/auth-router')
 const plantRouter = require('./plants/plants-router')
 function getAllUsers() { return db('users') }
