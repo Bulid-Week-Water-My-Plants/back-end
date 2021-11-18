@@ -10,19 +10,13 @@ const {
 
 router.post("/register", checkUsernameAvailable, (req, res, next) => {
   const credentials = req.body;
+  const rounds = process.env.BCRYPT_ROUNDS || 8;
+  const hash = bcrypt.hashSync(credentials.password, rounds);
 
-  if (
-    !credentials.username ||
-    !credentials.password
-    ) {
-    res
-      .status(400)
-      .json({ message: "username and password required" });
+  if (!credentials.username || !credentials.password) {
+    res.status(400).json({ message: "username and password required" });
   } else {
-    const rounds = process.env.BCRYPT_ROUNDS || 8;
-    const hash = bcrypt.hashSync(credentials.password, rounds);
     credentials.password = hash;
-
     Auth.add(credentials)
       .then((user) => {
         res.status(201).json(user);
