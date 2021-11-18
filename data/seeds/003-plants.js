@@ -1,6 +1,5 @@
 
 exports.seed = function(knex) {
-
       return knex('plants').insert([
         {nickname: "Bleeding Heart" , species: "Herbaceous perennial" , h2oFrequency:"weekly" },
         {nickname: "Cherry Blossom", species: "Prunus serrulata", h2oFrequency:"7-10 days" },

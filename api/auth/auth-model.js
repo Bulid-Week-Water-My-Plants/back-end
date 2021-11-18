@@ -9,17 +9,13 @@ function find() {
   }
   
   function add(user) {
-    return db("users").insert(user, [
-      "user_id",
-      "username",
-      "password",
-    ]);
+    return db("users").insert(user,['user_id','username','password'])
   }
   
   function updateUser(id, user) {
     return db("users")
       .where("user_id", id)
-      .update(user, ["user_id", "username", "password"]);
+      .update(user, ["user_id", "username", "password"]); //returned for the user
   }
   
   function findById(id) {
