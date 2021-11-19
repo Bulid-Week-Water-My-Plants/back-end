@@ -12,8 +12,8 @@ router.get("/", restricted, (req, res, next) => {
     .catch(next)
 })
 
-router.get('/:plant_id:', restricted, (req,res,next)=>{
-    Plant.getPlant(req.params.id)
+router.get('/:plant_id', restricted, (req,res,next)=>{
+    Plant.getPlant(req.params.plant_id)
     .then( plant => 
         res.json(plant))
     .catch(next)

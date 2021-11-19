@@ -43,7 +43,7 @@ router.post("/login", checkUsernameExists, (req, res, next) => {
         }
       })
       .catch(next);
-  }
+  } 
 });
 
 function buildToken(user) {
