@@ -1,5 +1,5 @@
 const db = require('../../data/db-config')
-
+//just finds and returns all the user
 function find() {
     return db("users");
   }
@@ -15,7 +15,7 @@ function find() {
   function updateUser(id, user) {
     return db("users")
       .where("user_id", id)
-      .update(user, ["user_id", "username", "password"]); //returned for the user
+      .update(user, ["user_id", "username", "password"]); 
   }
   
   function findById(id) {
