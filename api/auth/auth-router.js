@@ -8,6 +8,8 @@ const {
   checkUsernameExists,
 } = require("./auth-middleware");
 
+//where we use the encryption to verify user and sign them up
+
 router.post("/register", checkUsernameAvailable, (req, res, next) => {
   const credentials = req.body;
   const rounds = process.env.BCRYPT_ROUNDS || 8;
